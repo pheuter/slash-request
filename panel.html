@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap.min.css">
+
+  <script src="libs/jquery-1.9.1.min.js"></script>
+  <script src="libs/bootstrap.min.js"></script>
+  <script src="panel.js"></script>
+
+  <style type="text/css">
+    .accordion-inner {
+      overflow: auto !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>/request</h1>
+    <div class="accordion" id="page-data" style="position:relative;top:10px">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#page-data" href="#collapsePageData">Page Data</a>
+        </div>
+        <div id="collapsePageData" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <input type="text" id="filter-textkeys" class="input-medium search-query" placeholder="heading." style="margin-bottom:10px">
+            <table id="text-keys" class="table table-condensed table-striped">
+              <thead>
+                <tr>
+                  <th>Text key</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#model-data" href="#collapseModelData">Model Data</a>
+        </div>
+        <div id="collapseModelData" class="accordion-body collapse">
+          <div class="accordion-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="javascript:void(0);" id='reset' class='btn btn-danger btn-mini' style='margin-top:10px'>Reset data</a>
+  </div>
+</body>
+</html>
